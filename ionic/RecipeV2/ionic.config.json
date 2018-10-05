@@ -1,0 +1,8 @@
+{
+  "name": "RecipeV2",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "90f0b0c3"
+}

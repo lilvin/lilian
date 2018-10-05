@@ -1,0 +1,34 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>otp</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="form"style="background-image:url('https://source.unsplash.com/WLUHO9A_xik/1600x900')">
+  <form [formGroup]="otpForm">
+      <ion-item>
+          <ion-label floating>Enter OTP code:</ion-label>
+            <ion-input [formControl]="otpForm.controls['otp']"
+                type="text">Enter OTP code:</ion-input>
+          </ion-item>
+
+          <ion-row >
+              <ion-col text-center>
+                <button ion-button block color="#330066" (click)="onOtp()">
+                Proceed
+                </button>
+              </ion-col>
+            </ion-row>
+            <ion-row >
+                <ion-col text-center>
+                  <button ion-button block color="#330066" (click)="onResendOtp()">
+                  Resend Otp
+                  </button>
+                </ion-col>
+              </ion-row>
+ </form>
+</ion-content>

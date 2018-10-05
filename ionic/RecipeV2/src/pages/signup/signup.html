@@ -1,0 +1,56 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>signup</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="form"style="background-image:url('https://source.unsplash.com/WLUHO9A_xik/1600x900')">
+    <form [formGroup]="registerForm">
+        <ion-item>
+            <ion-label floating>firstName</ion-label>
+            <ion-input [formControl]="registerForm.controls['firstName']"
+                type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating>lastName</ion-label>
+              <ion-input [formControl]="registerForm.controls['lastName']"
+                  type="text"></ion-input>
+            </ion-item>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input [formControl]="registerForm.controls['email']"
+            type="email"></ion-input>
+      </ion-item>
+      
+      <ion-item padding-bottom>
+        <ion-label floating>Password</ion-label>
+        <ion-input [formControl]="registerForm.controls['password']"
+            type="password"></ion-input>
+      </ion-item>      
+      <ion-item padding-bottom>
+          <ion-label floating>Confirm Password</ion-label>
+          <ion-input [formControl]="registerForm.controls['confirmPassword']"
+              type="password"></ion-input>
+        </ion-item>  
+      <ion-row >
+        <ion-col text-center>
+          <button ion-button block color="#330066" (click)="onregister()">
+            Register
+          </button>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col text-center>
+          <button ion-button clear color="default" (click)="onhaveaccount()">
+            Already have an account?
+          </button>
+        </ion-col>
+      </ion-row>
+    
+    </form>
+</ion-content>
